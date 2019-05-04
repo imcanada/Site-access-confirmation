@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>Site access template</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="shortcut icon" type="image/png" href="icon.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="imcanada is the entirety of canada and is also a web designer. He makes cool YouTube videos and websites like this one.">
+        <meta name="keywords" content="imcanada, canada, trudeau, justin, justin trudeau, canadian, web design, web designer, YouTube, youtuber, github, githuber, iceland, icelandic, iao, iao corporation, MegaKiwi">
+        <meta name="robots" content="index, follow">
+        <meta name="copyright" content="Copyright 2019 (c) imcanada">
+        <meta name="language" content="EN">
+        <meta name="author" content="imcanada">
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Nunito');
+
+            html,body {
+                height: 98%;
+                background-color: white;
+                font-family: 'Nunito', sans-serif;
+                color: black;
+            }
+
+            h1 {
+                font-family: 'Nunito', sans-serif;
+            }
+            
+
+            .container { 
+                height: 100%;
+                position: relative;
+            }
+
+            .center {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
+            a {
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+                background-color: black;
+                font-family: 'Nunito', sans-serif;
+            }
+
+            .lock {
+                color: #82C91E;
+                font-size: 80pt;
+            }
+        </style>
+        <script>
+        var homepage = "home.html" // Set your homepage here (page to be redirected to after confirm)
+        var cookieName = "iconfirm=true" // (Optional) change the name of the cookie to something unique to your site
+
+        document.onload = checkConfirmation();
+
+        function confirmed() {
+            document.cookie = cookieName;
+            checkConfirmation();
+        }
+
+        function checkConfirmation() {
+            if (document.cookie.indexOf(cookieName) > -1 ) {
+                document.location.href = homepage;
+            }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="center">
+                <span class="lock"><i class="fas fa-lock"></i></span>
+                <h1>Site access confirmation</h1>
+                <p>The following site uses cookies, please confirm that you agree to the usage of cookies.
+                </p>
+                <br>
+                <a href="#" onclick="confirmed();">I confirm</a>
+            </div>
+        </div>
+    </body>
+</html>
